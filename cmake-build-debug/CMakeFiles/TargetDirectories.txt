@@ -1,0 +1,3 @@
+/home/user/repos/cpp-kanban/cmake-build-debug/CMakeFiles/cpp_kanban.dir
+/home/user/repos/cpp-kanban/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/user/repos/cpp-kanban/cmake-build-debug/CMakeFiles/rebuild_cache.dir
