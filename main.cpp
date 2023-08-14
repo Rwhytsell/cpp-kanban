@@ -171,6 +171,22 @@ int main() {
             boardItems.push_back(new_item);
         }
 
+        if (input == 'd')
+        {
+            system("clear");
+            cout << "Which item do you want to delete?:" << endl;
+            for(int item_i = 0; item_i < boardItems.size(); item_i++)
+            {
+                cout << "[" << to_string(item_i) << "] " << boardItems[item_i].description << endl;
+            }
+            cin >> int_input;
+            if(int_input < 0 || int_input >= boardItems.size())
+            {
+                break;
+            }
+            boardItems.erase(boardItems.begin()+int_input);
+        }
+
         if (input == 'm')
         {
             system("clear");
@@ -212,23 +228,9 @@ int main() {
                     bItem.state = ItemState::DONE;
                     boardItems[int_input] = bItem;
                     break;
+                default:
+                    break;
             }
-        }
-
-        if (input == 'd')
-        {
-            system("clear");
-            cout << "Which item do you want to delete?:" << endl;
-            for(int item_i = 0; item_i < boardItems.size(); item_i++)
-            {
-                cout << "[" << to_string(item_i) << "] " << boardItems[item_i].description << endl;
-            }
-            cin >> int_input;
-            if(int_input < 0 || int_input >= boardItems.size())
-            {
-                break;
-            }
-            boardItems.erase(boardItems.begin()+int_input);
         }
         Save(boardItems);
     }
